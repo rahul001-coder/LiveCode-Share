@@ -10,8 +10,10 @@ import { javascript } from "@codemirror/lang-javascript";
 import { io } from "socket.io-client";
 import axios from "axios";
 
-const SOCKET_SERVER_URL = "http://localhost:3000";
-const BACKEND_API_URL = "http://localhost:5000/api/code/execute";
+
+// Example from your Editor.jsx
+const SOCKET_SERVER_URL = import.meta.env.VITE_SOCKET_SERVER_URL ;
+const BACKEND_API_URL = import.meta.env.VITE_BACKEND_API_URL ;
 
 export const Editor = () => {
   const socketRef = useRef(null);
